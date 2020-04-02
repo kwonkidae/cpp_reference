@@ -44,6 +44,12 @@ int parallel_sum(RandomIt beg, RandomIt end)
 int main()
 {
   std::vector<int> v(10000, 1);
-  std::cout << "The sum is ";
+  std::cout << "The sum is " << parallel_sum(v.begin(), v.end()) << '\n';
+
+  X x;
+  auto a1 = std::async(&X::foo, &x, 42, "Hello");
+  auto a2 = std::async(std::launch::deferred, &X::bar, &x, "world!");
+  auto a3 = std::async(std::launch::async, X(), 43);
+  a2.wait();
   return 0;
 }
