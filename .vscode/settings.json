@@ -58,6 +58,11 @@
     "typeinfo": "cpp",
     "unordered_map": "cpp",
     "utility": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "complex": "cpp",
+    "future": "cpp",
+    "list": "cpp",
+    "numeric": "cpp",
+    "sstream": "cpp"
   }
 }
